@@ -10,10 +10,6 @@ import {
   Alert
 } from 'react-native';
 
-import { Navigation } from 'react-native-navigation'
-
-import First from './screens/first'
-
 export default class Login extends Component {
 
   constructor(props) {
@@ -25,17 +21,8 @@ export default class Login extends Component {
   }
 
   onClickListener = (viewId) => {
-    //this.goToScreen('first');
-    this.props.navigation.navigate('first')
-    Alert.alert("Alert", "Deividas rocks "+viewId);
-  }
-
-  goToScreen = (screenName) => {
-    Navigation.push(this.props.componentId,{
-      compenent:{
-        name: screenName
-      }
-    })
+    
+    Alert.alert("Alert", "Button pressed "+viewId);
   }
 
   render() {
@@ -84,7 +71,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#000000',
+    backgroundColor: '#FFFFFF',
   },
   inputContainer: {
     borderBottomColor: '#F5FCFF',
